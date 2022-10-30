@@ -10,3 +10,12 @@ function bounce(){
      clearInterval(intervalID);
      return;
    }
+    if ((y+dy > (screen.availHeight - h)) || (y+dy < 0)) dy = -dy;
+
+    // Update the current position of the window.
+    x += dx;
+    y += dy;
+
+    // Finally, move the window to the new position.
+    win.moveTo(x,y);
+}
